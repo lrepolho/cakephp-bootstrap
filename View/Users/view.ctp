@@ -31,9 +31,9 @@
 			<?php echo h($user['User']['birthdate']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Profile Id'); ?></dt>
+		<dt><?php echo __('Profile'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['profile_id']); ?>
+			<?php echo $this->Html->link($user['Profile']['name'], array('controller' => 'profiles', 'action' => 'view', $user['Profile']['id'])); ?>
 			&nbsp;
 		</dd>
 	</dl>
@@ -45,5 +45,7 @@
 		<li><?php echo $this->Form->postLink(__('Delete User'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Profiles'), array('controller' => 'profiles', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Profile'), array('controller' => 'profiles', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
