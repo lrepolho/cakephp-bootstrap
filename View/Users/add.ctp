@@ -1,16 +1,23 @@
 <div class="users form">
-<?php echo $this->Form->create('User'); ?>
+	<?php #echo $this->Form->create('User', array('class'=>'form-horizontal')); ?>
+	<?php echo $this->Form->create('User', array('class'=>'')); ?>
 	<fieldset>
 		<legend><?php echo __('Add User'); ?></legend>
-	<?php
-		echo $this->Form->input('name');
-		echo $this->Form->input('email');
-		echo $this->Form->input('active');
-		echo $this->Form->input('birthdate');
-		echo $this->Form->input('profile_id');
-	?>
+		<div class="form-group">
+			<?php echo $this->Form->input('name', array('class'=>'form-control')); ?>
+		</div>
+		<div class="form-group">
+			<?php echo $this->Form->input('email', array('class'=>'form-control')); ?>
+		</div>
+		<?php echo $this->Form->input('active'); ?>
+		<div class="form-group">
+			<?php echo $this->Form->input('birthdate'); ?>
+		</div>
+		<div class="form-group">
+			<?php echo $this->Form->input('profile_id'); ?>
+		</div>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+	<?php echo $this->Form->end(array('label' => __('Submit'), 'class' => 'btn btn-default')); ?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
