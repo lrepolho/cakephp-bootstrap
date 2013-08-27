@@ -5,6 +5,9 @@
 	<?php
 		echo $this->Form->input('name');
 		echo $this->Form->input('email');
+		echo $this->Form->input('active');
+		echo $this->Form->input('birthdate');
+		echo $this->Form->input('profile_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

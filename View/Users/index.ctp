@@ -6,6 +6,9 @@
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('email'); ?></th>
+			<th><?php echo $this->Paginator->sort('active'); ?></th>
+			<th><?php echo $this->Paginator->sort('birthdate'); ?></th>
+			<th><?php echo $this->Paginator->sort('profile_id'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($users as $user): ?>
@@ -14,6 +17,9 @@
 		<td><?php echo h($user['User']['name']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['created']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['email']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['active']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['birthdate']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['profile_id']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>

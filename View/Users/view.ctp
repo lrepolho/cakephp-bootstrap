@@ -21,6 +21,21 @@
 			<?php echo h($user['User']['email']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Active'); ?></dt>
+		<dd>
+			<?php echo h($user['User']['active']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Birthdate'); ?></dt>
+		<dd>
+			<?php echo h($user['User']['birthdate']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Profile Id'); ?></dt>
+		<dd>
+			<?php echo h($user['User']['profile_id']); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">
